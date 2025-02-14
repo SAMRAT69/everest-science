@@ -1,110 +1,78 @@
-/* Basic Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fullscreen background and canvas */
+/* Body styling */
 body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 0 10%;
     margin: 0;
-    overflow: hidden;
-    background: linear-gradient(to right, #002d72, #00c6ff);
-    font-family: Arial, sans-serif;
 }
 
-/* Title styling */
-.title {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 40px;
-    color: #fff;
-    text-align: center;
-    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
-    animation: fadeIn 2s ease-out;
+/* Container to center the content */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
 }
 
-/* Explanation Section */
-.content {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    line-height: 1.5;
-    width: 80%;
-    max-width: 600px;
+/* Section Styling */
+.section {
+    margin-bottom: 50px;
     opacity: 0;
-    animation: fadeInUp 3s ease-in-out forwards;
-    font-family: "Helvetica", sans-serif;
+    animation: fadeIn 1.5s forwards;
 }
 
-/* Image Container (Side-by-side images) */
-.image-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-    animation: slideIn 2s ease-out;
+.section:nth-child(1) {
+    animation-delay: 0.5s;
 }
 
-.image-box {
-    width: 45%;
-    margin: 0 20px;
-    transform: scale(0);
-    animation: scaleIn 1.5s ease-out forwards;
+.section:nth-child(2) {
+    animation-delay: 1s;
 }
 
+/* Image Title Styling */
+.image-title {
+    font-size: 2.5rem;
+    color: #1E88E5;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* Image Styling */
 .image {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 20px;
 }
 
-/* Hover Effect on Images */
 .image:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Animations */
+/* Description Styling */
+.image-description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+    margin-top: 10px;
+}
+
+/* Fade-in Animation */
 @keyframes fadeIn {
-    0% {
+    from {
         opacity: 0;
     }
-    100% {
+    to {
         opacity: 1;
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes slideIn {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes scaleIn {
-    0% {
-        transform: scale(0);
-    }
-    100% {
-        transform: scale(1);
     }
 }
