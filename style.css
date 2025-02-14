@@ -1,0 +1,83 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Fullscreen background and canvas */
+body {
+    margin: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, #002d72, #00c6ff);
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.title {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 40px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+    animation: fadeIn 2s ease-out;
+}
+
+/* Explanation Section */
+.content {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    width: 80%;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeInUp 3s ease-in-out forwards;
+    font-family: "Helvetica", sans-serif;
+}
+
+/* Button Styling (if you want to add buttons later) */
+button {
+    padding: 12px 24px;
+    background-color: #00c6ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-top: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0066cc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
