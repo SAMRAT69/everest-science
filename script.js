@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll('.section');
-    
+
     function revealSections() {
         sections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
