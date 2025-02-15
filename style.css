@@ -9,7 +9,7 @@
 /* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #4e54c8, #8f94fb); 
+    background: linear-gradient(135deg, #1f1f2e, #6b6b83);
     color: #fff;
     padding: 0;
     margin: 0;
@@ -31,7 +31,7 @@ body {
 }
 
 /* Image Title Styling */
-.image-title {
+.image-title, .team-title {
     font-size: 2.8rem;
     color: #f1f1f1;
     font-weight: bold;
@@ -46,12 +46,12 @@ body {
     max-width: 600px;
     height: auto;
     border-radius: 15px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease-in-out;
 }
 
 .image:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 /* Description Styling */
@@ -61,6 +61,33 @@ body {
     line-height: 1.8;
     text-align: center;
     margin-top: 20px;
+}
+
+/* Team Section */
+.team-section {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.member {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease-in-out;
+}
+
+.member:hover {
+    transform: scale(1.1);
 }
 
 /* Fade-in Effect */
