@@ -3,12 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #4e54c8, #8f94fb); /* Cool gradient background */
+    background: linear-gradient(135deg, #4e54c8, #8f94fb); 
     color: #fff;
     padding: 0;
     margin: 0;
@@ -16,42 +17,37 @@ body {
 
 /* Container to Center the Content */
 .container {
-    max-width: 1200px;
-    margin: 40px auto;
+    max-width: 1000px;
+    margin: 60px auto;
+    text-align: center;
 }
 
 /* Section Styling */
 .section {
     margin-bottom: 60px;
     opacity: 0;
-    animation: fadeInUp 1.5s forwards;
-}
-
-.section:nth-child(1) {
-    animation-delay: 0.5s;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
 /* Image Title Styling */
 .image-title {
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: #f1f1f1;
-    text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    animation: fadeIn 1.5s ease-out;
 }
 
 /* Image Styling */
 .image {
     width: 80%;
+    max-width: 600px;
     height: auto;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease-in-out;
-    margin: 20px auto;
-    display: block;
 }
 
 .image:hover {
@@ -60,31 +56,15 @@ body {
 
 /* Description Styling */
 .image-description {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #e0e0e0;
     line-height: 1.8;
-    text-align: justify;
+    text-align: center;
     margin-top: 20px;
 }
 
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Slide-up Animation */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Fade-in Effect */
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
 }
